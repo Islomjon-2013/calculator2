@@ -4,11 +4,13 @@ let select = document.querySelector('select');
 let res = document.querySelector('.res');
 let btn = document.querySelector(`button`)
 
- function point(){
+
+function point(){
     number1.value="";
     number2.value="";
-    btn.setAttribute(`disabled`,`disabled`)
+ 
  }
+
 
 
 function result(){
@@ -17,33 +19,36 @@ function result(){
     res.innerHTML = num1 + num2;
 
 switch(select.value){
-    case 'sum':
-        res.innerHTML = num1+num2;
+
+    case 'exp':
+        res.innerHTML=num1**2;
         point()
         break;
+  case 'exp2':
+    res.innerHTML= num2**2;
+    point()
+break;
+    case 'sum':
+        res.innerHTML = num1 + num2;
+        point()
+        break;
+        
         case 'sub':
-            res.innerHTML = num1-num2;
+            res.innerHTML = num1 - num2;
             point()
             break;
             case 'mul':
-            res.innerHTML = num1*num2;
+            res.innerHTML = num1 * num2;
             point()
             break;
             case 'div':
-            res.innerHTML = num1/num2;
-            point()
-            case 'exp':
-                res.innerHTML=num1**2;
-                point()
-                break;
-          case 'exp2':
-            res.innerHTML= num2**2;
-            point()
+           res.innerHTML=num1 / num2;
+           point()
             break;
+            
             default:
+                break;
 }
 }
-
-
 
 
